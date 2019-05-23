@@ -1,7 +1,13 @@
+import os
 nome = (input("Informe seu Nome: "))
 idade = (input("Qual sua Idade: "))
 peso = float(input("Qual seu peso. Ex: 60,80,90: "))
 altura = float(input("Qual sua altura. Ex: 1.70: "))
+
+if os.name == "nt":
+    os.system("cls")
+else:
+    os.system("clear")
 
 formula = altura * altura
 imc = peso / formula
@@ -31,7 +37,3 @@ else:
     print(nome, "Seu IMC é: %.2f " % imc)
     print("Sua Classificação é: OBESIDADE GRAVE")
     print("Seu grau de obesidade é: 3")
-
-
-
-
